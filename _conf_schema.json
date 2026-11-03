@@ -1,0 +1,39 @@
+{
+    "reasoning_effort": {
+        "description": "思考强度（改完重启实例生效）",
+        "type": "string",
+        "options": ["不修改", "off", "low", "high", "max"],
+        "default": "不修改",
+        "hint": "四档跟 DeepSeek 原生对齐：off 关思考 / low 轻度 / high 默认 / max 最大。选「不修改」则插件不碰配置文件——想用聊天指令换档时保持这个值。"
+    },
+    "apply_on_startup": {
+        "description": "插件加载时自动套用上面的档位",
+        "type": "bool",
+        "default": false,
+        "hint": "打开后，每次插件加载（含重启实例）都会把上面选的档位写进 cmd_config.json。"
+    },
+    "only_deepseek": {
+        "description": "只改 DeepSeek 的 provider",
+        "type": "bool",
+        "default": true,
+        "hint": "勾上后只动 deepseek/ 开头的 provider。现在实例里只有两个 DeepSeek，保持勾选即可。"
+    },
+    "backup": {
+        "description": "修改前备份配置文件",
+        "type": "bool",
+        "default": true,
+        "hint": "强烈建议保持开启。备份文件名带时间戳，随时可以翻回去。"
+    },
+    "max_backups": {
+        "description": "最多保留几份备份",
+        "type": "int",
+        "default": 3,
+        "hint": "超过这个数量时，自动丢弃最旧的那一份。填 3 表示始终只留最近三份。"
+    },
+    "verbose": {
+        "description": "在日志里留下记录",
+        "type": "bool",
+        "default": true,
+        "hint": "每次换档、清理旧备份都会往日志写一行，方便你事后确认它到底做过什么。"
+    }
+}
