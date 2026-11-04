@@ -413,3 +413,5 @@ class ThinkingEffortPlugin(Star):
             "  高 high    默认档，日常和写代码都够\n"
             "  最高 max   投入最大算力，硬核推理用"
         )
+
+#I Love You 沐
